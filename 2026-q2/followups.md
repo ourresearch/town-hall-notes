@@ -11,7 +11,7 @@ For larger items, this file links out to the dedicated tracking issue or oxjob.
 | Jacob Hill | The author-merge bug from March 10 (Jason Priem ↔ Bradley Hemminger) — has the specific case been resolved? | done | Confirmed fixed in production (May 2026). Priem (`A5023888391`) and Hemminger (`A5074459108`) are now distinct authors with cleanly separated authorship records on co-authored works (e.g. _Altmetrics in the wild_). |
 | Eric | Walden seems to classify many more works as Diamond OA than pre-Walden. Is Walden treating null APC as zero? | in-progress | **Confirmed:** the OA classifier in `openalex-walden/notebooks/end2end/CreateWorksBase.ipynb` uses `ZEROIFNULL(apc_usd) = 0` at three sites, which treats null APC the same as $0 APC and bumps OA-at-unknown-APC works from Gold to Diamond. Production currently shows 16.9M Diamond vs 19.4M Gold (implausibly close). Fix scoped in oxjob 151.2 — replace with `apc_usd = 0` to preserve NULL semantics. |
 | Ed | Where can the community track changes for the author entity resolution work? | done | Watch [`ourresearch/openalex-walden`](https://github.com/ourresearch/openalex-walden) (public, MIT). The deterministic Python name parser lives inline in [`notebooks/end2end/CreateAuthorNames.ipynb`](https://github.com/ourresearch/openalex-walden/blob/main/notebooks/end2end/CreateAuthorNames.ipynb) (search for `aer-python-name-parser`). |
-| Ed | Will the gold standard for the name parser be made public? | open | Yes. Verify it is in the repo (or push it) and link from the docs. |
+| Ed | Will the gold standard for the name parser be made public? | done | Released as [`ourresearch/human-name-parser-gold-standard`](https://github.com/ourresearch/human-name-parser-gold-standard) (MIT, public). Includes 15,309 Opus-parsed names plus the prompt and harness used to build them. |
 | Last questioner | Which embedding algorithm is used? | done | [GTE Large EN](https://huggingface.co/thenlper/gte-large) (open-source, Alibaba DAMO Academy), served via Databricks Foundation Models as `databricks-gte-large-en`. 1,024-dim. Now documented in the new [Semantic Search guide](https://developers.openalex.org/guides/semantic-search). |
 
 ## Quick fixes & feature requests
@@ -20,7 +20,7 @@ For larger items, this file links out to the dedicated tracking issue or oxjob.
 |------|--------|-------|------|
 | Add link to Bianca Kramer et al.'s analysis of awards-coverage (OpenAlex vs Scopus / Web of Science / Dimensions) into the Q1 retro. | done | jason | Kramer & de Jonge, [_Funding metadata in OpenAlex: where are they now?_](https://bmkramer.github.io/SesameOpenScience_site/thought/202603_open_funding_information/) (March 2026). Linked from the retro's Funder & Awards section. |
 | Document the embedding model used for author-level embeddings and semantic search in the API docs. | done | jason | [Semantic Search guide](https://developers.openalex.org/guides/semantic-search) |
-| Publish the AI-generated name-parser gold standard alongside the parser. | open | | — |
+| Publish the AI-generated name-parser gold standard alongside the parser. | done | jason | [`ourresearch/human-name-parser-gold-standard`](https://github.com/ourresearch/human-name-parser-gold-standard) |
 | Publish town hall transcripts to the [`town-hall-notes`](https://github.com/ourresearch/town-hall-notes) repo going forward (this file is the Q2 prototype). | done | jason | This commit |
 
 ## Larger requests (parked / gathering interest)
