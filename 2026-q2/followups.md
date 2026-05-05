@@ -8,9 +8,9 @@ For larger items, this file links out to the dedicated tracking issue or oxjob.
 
 | Asked by | Question | Status | Answer / link |
 |----------|----------|--------|---------------|
-| Jacob Hill | The author-merge bug from March 10 (Jason Priem ↔ Bradley Hemminger) — has the specific case been resolved? | open | Underlying root cause (cross-author name propagation) addressed via watertight name boundaries. Full re-run of affected records expected by end of Q2. |
+| Jacob Hill | The author-merge bug from March 10 (Jason Priem ↔ Bradley Hemminger) — has the specific case been resolved? | done | Confirmed fixed in production (May 2026). Priem (`A5023888391`) and Hemminger (`A5074459108`) are now distinct authors with cleanly separated authorship records on co-authored works (e.g. _Altmetrics in the wild_). |
 | Eric | Walden seems to classify many more works as Diamond OA than pre-Walden. Is Walden treating null APC as zero? | open | Investigation needed — confirm whether null APC is being coerced to zero in the Walden OA classifier. |
-| Ed | Where can the community track changes for the author entity resolution work? | open | Primary repo: `openalex-walden`. Python name parser is in a separate repo — exact location to be confirmed and added to the retro / docs. |
+| Ed | Where can the community track changes for the author entity resolution work? | done | Watch [`ourresearch/openalex-walden`](https://github.com/ourresearch/openalex-walden) (public, MIT). The deterministic Python name parser lives inline in [`notebooks/end2end/CreateAuthorNames.ipynb`](https://github.com/ourresearch/openalex-walden/blob/main/notebooks/end2end/CreateAuthorNames.ipynb) (search for `aer-python-name-parser`). |
 | Ed | Will the gold standard for the name parser be made public? | open | Yes. Verify it is in the repo (or push it) and link from the docs. |
 | Last questioner | Which embedding algorithm is used? | open | Whichever open-source embedding Databricks implements natively. To be named explicitly in the API docs and verified in the `openalex-walden` repo. |
 
