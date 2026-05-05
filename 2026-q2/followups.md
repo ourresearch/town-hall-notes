@@ -18,7 +18,7 @@ For larger items, this file links out to the dedicated tracking issue or oxjob.
 
 | Item | Status | Owner | Link |
 |------|--------|-------|------|
-| Add link to Bianca Kramer et al.'s analysis of awards-coverage (OpenAlex vs Scopus / Web of Science / Dimensions) into the Q1 retro. | open | jason | — |
+| Add link to Bianca Kramer et al.'s analysis of awards-coverage (OpenAlex vs Scopus / Web of Science / Dimensions) into the Q1 retro. | done | jason | Kramer & de Jonge, [_Funding metadata in OpenAlex: where are they now?_](https://bmkramer.github.io/SesameOpenScience_site/thought/202603_open_funding_information/) (March 2026). Linked from the retro's Funder & Awards section. |
 | Document the embedding model used for author-level embeddings and semantic search in the API docs. | done | jason | [Semantic Search guide](https://developers.openalex.org/guides/semantic-search) |
 | Publish the AI-generated name-parser gold standard alongside the parser. | open | | — |
 | Publish town hall transcripts to the [`town-hall-notes`](https://github.com/ourresearch/town-hall-notes) repo going forward (this file is the Q2 prototype). | done | jason | This commit |

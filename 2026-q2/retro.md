@@ -41,6 +41,8 @@ Backed by a **$3.6M grant from Wellcome**, we massively expanded our funding met
 
 We also built a standardized 8-step ingestion workflow and funder tracker to systematize ongoing additions.
 
+External validation: in [_Funding metadata in OpenAlex: where are they now?_](https://bmkramer.github.io/SesameOpenScience_site/thought/202603_open_funding_information/) (March 2026), Bianca Kramer and Hans de Jonge benchmarked OpenAlex against Scopus, Web of Science, and Dimensions on a dataset of 5,004 NWO-funded publications. OpenAlex reached **78.0% coverage** — matching Scopus (78.1%) and closing on Dimensions (81.1%) and Web of Science (83.1%) just months into the Wellcome-funded project.
+
 ## Japanese Repository Integration (IRDB)
 
 We completed a contract deliverable to ingest **~4.6M records from IRDB** (Japan's Institutional Repository DataBase) via a centralized OAI-PMH endpoint using the JPCOAR 2.0 metadata format. This replaced 74 failing individual NII endpoints. We also created Source records and endpoint mappings for ~700 Japanese institutional repositories, and added ~500 new OAI-PMH endpoints from OpenAIRE's registry.
