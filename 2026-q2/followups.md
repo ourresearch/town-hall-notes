@@ -12,14 +12,14 @@ For larger items, this file links out to the dedicated tracking issue or oxjob.
 | Eric | Walden seems to classify many more works as Diamond OA than pre-Walden. Is Walden treating null APC as zero? | open | Investigation needed — confirm whether null APC is being coerced to zero in the Walden OA classifier. |
 | Ed | Where can the community track changes for the author entity resolution work? | done | Watch [`ourresearch/openalex-walden`](https://github.com/ourresearch/openalex-walden) (public, MIT). The deterministic Python name parser lives inline in [`notebooks/end2end/CreateAuthorNames.ipynb`](https://github.com/ourresearch/openalex-walden/blob/main/notebooks/end2end/CreateAuthorNames.ipynb) (search for `aer-python-name-parser`). |
 | Ed | Will the gold standard for the name parser be made public? | open | Yes. Verify it is in the repo (or push it) and link from the docs. |
-| Last questioner | Which embedding algorithm is used? | open | Whichever open-source embedding Databricks implements natively. To be named explicitly in the API docs and verified in the `openalex-walden` repo. |
+| Last questioner | Which embedding algorithm is used? | done | [GTE Large EN](https://huggingface.co/thenlper/gte-large) (open-source, Alibaba DAMO Academy), served via Databricks Foundation Models as `databricks-gte-large-en`. 1,024-dim. Now documented in the new [Semantic Search guide](https://developers.openalex.org/guides/semantic-search). |
 
 ## Quick fixes & feature requests
 
 | Item | Status | Owner | Link |
 |------|--------|-------|------|
 | Add link to Bianca Kramer et al.'s analysis of awards-coverage (OpenAlex vs Scopus / Web of Science / Dimensions) into the Q1 retro. | open | jason | — |
-| Document the embedding model used for author-level embeddings and semantic search in the API docs. | open | | — |
+| Document the embedding model used for author-level embeddings and semantic search in the API docs. | done | jason | [Semantic Search guide](https://developers.openalex.org/guides/semantic-search) |
 | Publish the AI-generated name-parser gold standard alongside the parser. | open | | — |
 | Publish town hall transcripts to the [`town-hall-notes`](https://github.com/ourresearch/town-hall-notes) repo going forward (this file is the Q2 prototype). | done | jason | This commit |
 
