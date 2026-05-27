@@ -1,77 +1,71 @@
-# Members Meeting Roadmap — looking ahead
+# Roadmap — what's on the table
 
-What we're working on between now and the next quarterly town hall. This is an in-progress snapshot — finer-grained than the Q2 roadmap we shared four weeks ago, with more detail on what each thread looks like *next week*.
+**Through June: the [Q2 roadmap](../2026-q2/roadmap.md) is unchanged.** Author accuracy, data-quality grind, process improvements, London funder workshop. Nothing new to share there — we're heads-down executing.
 
-## Author accuracy (finishing what Q2 started)
+**The rest of this doc is about Q3** (July onward). None of this is committed — it'll be set at the next quarterly town hall. **This meeting is your chance to push us in or out on each of these.**
 
-Most of Q2's roadmap was "finish author accuracy in 6 weeks." We're roughly halfway through that window and the major pieces are landing.
+---
 
-- **Apply author curations end-to-end** (#168). The producer half — claim a profile, edit display_name, add/remove works through the GUI — is live. The consumer half (a Walden notebook that takes the curation rows and writes them back into `openalex_works` overnight) is in flight. When it finishes, your in-GUI corrections will appear in the API within ~24 hours.
-- **Merge overmerged-author splits using ORCID** (#145 stragglers). Phase 2 split shipped this month; the corresponding merge side is next.
-- **ORCID-based merging** for incorrectly-split profiles is close — was on the Q2 roadmap and is the next piece in the AER v4 pipeline.
-- **Surface "no-op" and "no-byline" curations** (#251) — today, some submitted curations sit "pending" for 7 days even though they could never apply (the work doesn't have the byline being edited). We're going to reject these at submit time with an actionable error so users aren't waiting on something that will never happen.
-- **Raw affiliation strings as durable identifiers** (#235). We need RAS to be safely immutable so downstream curations can reference them. Active this week.
+## Collections — full version (~set)
 
-## Repository ingest cleanup
+Today's collections feature is limited: you can only filter within a single entity type. We're planning to fix that. Use cases this unlocks:
 
-Casey is running a multi-week sweep through repository ingest losses. The Q2 retro flagged that ingest funnel-tracking was missing; now that we have it (#98), we can act on the numbers.
+- **Library subscriptions.** Collect every Elsevier journal your library subscribes to → filter works in those journals over the last 2 years → see citation rates, OA %, and which works have authors from your institution.
+- **Department analytics.** Collect the 50 authors in your chemistry department → see their output over time → compare to chemistry departments at peer universities.
+- **Public / shared collections.** Consortium-level collections, vetted reading lists, public benchmark sets.
 
-- **IRUA harvester fix** (#227) alone is expected to unblock ~5.74M dropped records across 18 repositories — including ~2.1M from IRDB (the Japanese aggregator we onboarded in Q1) and ~1.1M from QUT. Active now.
-- **LaReferencia / Dialnet routing** (#158) addresses ~8.1M misrouted works.
-- **Repository operator dashboard** improvements continue, building on what was shipped in Q1.
+Pricing as we're thinking about it: **base collections stay free, advanced collections become a Member-tier feature.** This is part of a larger pricing rethink (see next item).
 
-## Funder / awards
+**For discussion:** What collections would you want to build? What's the biggest analytics question your institution currently can't easily answer with OpenAlex?
 
-The Wellcome-funded funder push continues. Two big pieces this quarter:
+## OpenAlex Curation Certification (open for input)
 
-- **DataCite funding metadata** (#125, #125.2). Crossref alone gave us strong coverage of journal articles; DataCite extends that into datasets, software, preprints, and the long tail of non-Crossref-DOI scholarship. The ingest pipeline is wired up; this is now about quality at scale.
-- **NWO grant ↔ work linkages** (#244). NWO has a curated dataset of which works each grant funded — most funders don't. This is a test case for ingesting that kind of authoritative linkage and could become a template for other funders that have it.
-- **London funder workshop** — Wellcome-funded; me and Kyle are bringing funders together to listen. Q2 roadmap goal, happening on schedule.
+Members keep asking for the ability to curate other people's profiles — your researchers, your affiliations, your journal records. We've held back because in past experiments untrained curators made high volumes of mistakes that cost us significant moderator time.
 
-## Content API quality
+The idea on the table:
 
-This month we did the cleanup pass on GROBID XML. Next is closing the loop with the heaviest Content API users.
+- **Train and certify individual curators.** Online course + test. Likely around $100, possibly more (we'd do the math). Scholarships available. Members get a number of free slots per year.
+- **One certification or several?** Probably a set: OA status, author profiles, affiliation strings, journal metadata, etc. Open question.
 
-- **Quantify the Stanford Medicine fetch-failure remediation** (#242). They reported ~797K Content API fetch failures; #185 and #202 should have closed most of those. We're auditing what's actually fixed vs still failing so we can ship the remaining diff.
-- **Parseland → openalex-walden integration improvements**. Two Elsevier parser iterations (#246, #247) and two Springer iterations (#262, #263) are in flight, each measured against the new parseland gold standard (#122, #131). The point isn't "ship a fix" — it's "ship a fix whose effect on the per-publisher failure rate we can prove."
+The bigger strategic shift, also on the table:
 
-## Search reliability & abuse defense
+- **Replace "curation rights" with "advanced collections" as the primary Member-tier value driver.**
+- Today: $5K Member tier required to curate.
+- Possible: anyone certified curates for a few hundred bucks; Members pay for advanced collections instead.
+- This responds to feedback that $5K-to-curate feels like we're ransoming members' data. We hear that. The fee reflects real moderation + engineering costs, but tying it to collections instead of curation may be a fairer fit.
 
-After the cluster of search-recall and 500-error reports we resolved this month, we're investing in the long-term defenses.
+**For discussion:** Would your institution prefer this model? Would you send curators through certification? What price would actually work for you?
 
-- **Systematic query-abuse detection** (#194). Today we identify abusive query patterns reactively, after they degrade latency. Next: detect-and-block at the proxy, before they hit Elasticsearch.
-- **Curation timeout status hardening** (#198). We have a 7-day `timed_out` terminal status now, but ~2,430 RAS curations are currently in that state — we need to understand why and ship the remediation path before this becomes a persistent regression.
+## Better tools for user ↔ org assignment
 
-## Data quality grab-bag (Zendesk-driven)
+A May win was multi-email signup: your researchers can add their `institution.edu` email to a Gmail-signup account and get counted under your org. That's a start.
 
-Same posture as Q2: keep raking the lawn. We have ~2,300 open Zendesk tickets and the goal is to grind through them. Some examples currently in flight or queued:
+What we're thinking about next:
 
-- Diamond OA misclassification — Walden treats null APC as `$0`, inflating Diamond OA counts (in-progress, fix scoped)
-- Various arxiv ingest bugs (language, PMH locations, missing PDFs)
-- Author-sequence corruption on small numbers of works
-- Idiosyncratic repository `work.type` taxonomies that need crosswalks
-- Aggregator-endpoint source mapping (sequel to #156)
+- **Bulk roster import** for org admins (upload a CSV of researchers / ORCID iDs / emails).
+- **Domain auto-association** improvements.
+- **Manual admin override** — add a user to your org even if their email doesn't match.
 
-## Process & AI-assisted ops
+**For discussion:** Which of these would move the needle for you? Anything we're missing?
 
-This is the thread that was carried over from Q2 — and where I personally spend the most time.
+## AI / agent access (MCP, CLI, the dashboard-by-agent vision)
 
-- **Semi-automated ticket solving.** Most Zendesk tickets follow predictable shapes. We're building agent-assisted triage where Claude proposes a diagnosis + draft reply + suggested oxjob for a human to approve. Early results are encouraging — the bottleneck has shifted from "find the bug" to "approve the fix."
-- **oxjobs continues to evolve.** Our internal tracker now has labels (replacing project IDs), an oxjobs.org HUD with multi-select filters, and is starting to act like a process-QA dashboard.
-- **Agent-driven story testing.** Experimental: before shipping non-trivial features, an agent runs through scripted scenarios (claim a profile, edit a work, etc.) end-to-end in a browser and reports failures. Early days; one trial run on the collections feature.
+We already have a CLI. An **MCP server is in development.**
 
-## What this means for Member-tier institutions specifically
+The future we keep pointing at: most users will access OpenAlex through their own agents, not through our GUI. Examples this enables:
 
-A subset of this work is most directly relevant to paying members:
+- *"Curate these author profiles for me."*
+- *"Make a collection of the journals in this spreadsheet, then show me citation rates of my institution's authors in those journals compared to authors at peer institutions."*
+- *"Build me a dashboard of last year's NIH-funded chemistry output at our institution."*
 
-- **Author curation end-to-end** — your researchers can claim and curate their own profiles, with corrections flowing into the API within a day.
-- **Org affiliation via multi-email** — your researchers' Gmail-signup accounts can now be properly counted under your institution's plan.
-- **Collections** — save and share curated entity sets across your team without leaving OpenAlex.
-- **Affiliation-curation v2** — same matching dashboard, now with the curation status lifecycle (pending → applied / timed_out) so your curators know what's been ingested.
-- **Snapshot AWS sync** — paid `aws s3 sync` against our monthly snapshot using standard S3 tooling.
+The agent does the API calls and renders a result tailored to your exact question. We don't have to build every possible UI affordance because every user's agent builds the one *they* need.
 
-What we'd most like to hear from members in this meeting:
+**The real tension:** many librarians have AI restrictions — institutional policy, ethical concerns, water/energy use, or simply not being permitted to use AI at work. We need to calibrate how fast we lean into this future against what members can actually use today.
 
-- What's missing from the above that you'd prioritize?
-- Which of these features are you actually using? Where do you wish they worked differently?
-- What would make Member tier more valuable to your institution?
+**For discussion:** How are you (or aren't you) using AI with OpenAlex today? What's blocking you institutionally? Are agent-driven workflows something your stakeholders would adopt — or actively avoid?
+
+---
+
+## How we'd like to use this meeting
+
+Each section above ends with a discussion prompt — those are real questions, not rhetorical. We're at the point in Q3 planning where member input meaningfully changes what we commit to. Tell us what's wrong, what's missing, and what you'd swap out for what.
