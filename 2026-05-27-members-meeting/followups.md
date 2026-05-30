@@ -10,7 +10,7 @@ Questions where the answer was "let me check and get back to you."
 
 | Asked by | Question | Status | Answer / link |
 |----------|----------|--------|---------------|
-| Tobias Jeppsson (KTH), seconded by Gloria Gonzalez (EBSCO) & Shylaja L | Decreasing abstract coverage from some publishers — is this a real trend, and what's being done about it? | answered | We pulled the numbers from our own data: of the top 50 publishers, 12 show declining abstract coverage. Full interactive report (coverage over time, by publisher, OA vs. closed): **https://oxjobs.org/reports/276** |
+| Tobias Jeppsson (KTH), seconded by Gloria Gonzalez (EBSCO) & Shylaja L | Decreasing abstract coverage from some publishers — is this a real trend, and what's being done about it? | answered — emailed to all three 2026-05-30 | Yes, it's real. We pulled the numbers from our own data and built an interactive report: **https://oxjobs.org/reports/276** (coverage over time, by publisher, with an OA-vs-closed toggle). Of the top 50 publishers, 12 show a clear year-over-year decline — but that count *understates* the problem: the biggest publishers (Elsevier, Springer Nature) don't read as "declining" because we dropped all their toll-access abstracts in one step, so their line is flat-and-low rather than trending down. Next: scoping how much our landing-page parsing work recovers. |
 
 ## Quick fixes & feature requests
 
