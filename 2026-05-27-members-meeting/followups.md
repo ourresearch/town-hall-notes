@@ -10,7 +10,7 @@ Questions where the answer was "let me check and get back to you."
 
 | Asked by | Question | Status | Answer / link |
 |----------|----------|--------|---------------|
-| | | open | |
+| Tobias Jeppsson (KTH), seconded by Gloria Gonzalez (EBSCO) & Shylaja L | Decreasing abstract coverage from some publishers — is this a real trend, and what's being done about it? | answered | We pulled the numbers from our own data: of the top 50 publishers, 12 show declining abstract coverage. Full interactive report (coverage over time, by publisher, OA vs. closed): **https://oxjobs.org/reports/276** |
 
 ## Quick fixes & feature requests
 
@@ -30,4 +30,4 @@ Not promised on the call, but worth tracking — things that came up and were de
 
 ---
 
-**Status legend:** `open` · `in-progress` · `done` · `wontfix`
+**Status legend:** `open` · `in-progress` · `answered` · `done` · `wontfix`
