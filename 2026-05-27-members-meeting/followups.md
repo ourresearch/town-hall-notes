@@ -20,9 +20,9 @@ Small bugs / features promised on the call. Larger ones get their own oxjob — 
 
 | Item | Status | Owner | Link (PR / oxjob / ticket) |
 |------|--------|-------|----------------------------|
-| **Bug:** non-article OA links — an OA book *chapter* appears to flag the whole *book* as OA (Jeremy Prevost, seconded by Shylaja L) | open | — | needs triage |
-| Country-scoped affiliation linking/unlinking in the org curation tool — let an org say "all `KTH`-from-Sweden strings → KTH Royal Inst of Tech" (Tobias Jeppsson) | open | Kyle | routed to kyle@openalex.org |
-| Export the set of papers under a given affiliation before bulk link/unlink (not possible in the curation UI today) (Tobias Jeppsson) | open | — | feature request |
+| **Bug:** non-article OA links — an OA book *chapter* appears to flag the whole *book* as OA (Jeremy Prevost, seconded by Shylaja L) | likely fixed | — | A known reported instance (a Palgrave book) now reports correctly as closed-access, so this appears already fixed in the current data. No specific example was given on the call — if you hit one that's still wrong, send the work and we'll reopen. |
+| Country-scoped affiliation linking/unlinking in the org curation tool — let an org say "all `KTH`-from-Sweden strings → KTH Royal Inst of Tech" (Tobias Jeppsson) | not planned for now | — | Agreed this is valuable but hard to do well; we're not taking it on yet. The related, smaller piece (preview/export the affected works before a bulk link) is being built — see next row. |
+| Export the set of papers under a given affiliation before bulk link/unlink (not possible in the curation UI today) (Tobias Jeppsson) | tracked | — | Building it — internal job filed. We'll add a way to preview/export the exact set of works a bulk link/unlink would touch before you commit. |
 | Add users from outside your email domain to the org dashboard, for outside partners (Maria Praetzellis) | open | Kyle | Kyle gathering the use case |
 | Collections available via the API (Maria Praetzellis) | open | — | Collections just launched; roadmap |
 | Expose first-name + last-name from the new author-name recognition in the API (Tijmen Altena) | parked | — | Jason: maybe, pending demand — gauging interest |
