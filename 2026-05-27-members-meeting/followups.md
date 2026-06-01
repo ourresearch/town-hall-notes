@@ -26,7 +26,6 @@ Small bugs / features promised on the call. Larger ones get their own oxjob — 
 | Add users from outside your email domain to the org dashboard, for outside partners (Maria Praetzellis) | tracked | — | Building it — internal job filed. We'll add an admin override to grant access to partners on a different email domain (with sensible guardrails). We'll ping you when it ships. |
 | Collections available via the API (Maria Praetzellis) | open | — | Collections just launched; roadmap |
 | Expose first-name + last-name from the new author-name recognition in the API (Tijmen Altena) | parked | — | Jason: maybe, pending demand — gauging interest |
-| Preprint ↔ published-version linking via embedding-vector proximity (Thibault Tarpin) | open | — | idea |
 
 ## Larger requests (parked / gathering interest)
 
