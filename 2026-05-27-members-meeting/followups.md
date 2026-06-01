@@ -39,7 +39,7 @@ Not promised on the call, but worth tracking — things that came up and were de
 | **Funding-consortium monitoring via Collections** — a collection of funders → "works funded by any of these" (Adam Buttrick) | Kyle: "yes, that will be possible, but isn't yet." |
 | **EBSCO journal-collections collaboration** — share libraries' subscribed-journal lists to seed Collections (Gloria Gonzalez) | Kyle: "that's the exact use case that started this feature — happy to follow up afterwards." |
 | **Comprehensive OpenAlex API "skill"** covering all API functionality (preferred over MCP) (Adam Buttrick; +Jeremy Prevost, Eric Jeangirard, Trang Le) | DevRel: package the API as an agent skill. |
-| **MCP server feedback** — members offered to test the in-development MCP server (Markus Skyttner) | Loop them in when it's ready for feedback. |
+| **MCP server feedback** — members offered to test the in-development MCP server (Markus Skyttner) | **Tracked — internal job filed.** We'll ping Markus (and others who're keen on agent access, e.g. Adam) for feedback once the MCP server hits beta. |
 | **Publication-year inconsistencies vs Scopus** (Maria Mora Mora) | Offered to share the stats + affected works she validated against Scopus + raw data. Invite the data. |
 | **AER (entity resolution) v4 release estimate** (Maria Mora Mora) | Partly answered re: narrowing ORCID inference scope; a timeline estimate is still owed. |
 
