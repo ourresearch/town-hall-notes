@@ -52,6 +52,8 @@ What we're thinking about next:
 
 We already have a CLI. An **MCP server is in development.**
 
+**Where this is heading (a strong focus area for us — expect movement this month and ongoing):** members made clear they want great programmatic + agent access over an AI tool bolted onto the website, and Adam's idea of "a skill that covers all the API functionality" drew a lot of support. So our near-term plan is some combination (one or all) of: **improving the CLI**, **adding more recipes to the documentation**, **shipping an Anthropic-style Skill**, and **shipping an MCP server**. We think Skills and MCP serve two different audiences (data-analysts who point an agent at our docs vs. people living in Claude/ChatGPT), so it's likely not either/or.
+
 The future we keep pointing at: most users will access OpenAlex through their own agents, not through our GUI. Examples this enables:
 
 - *"Curate these author profiles for me."*
