@@ -41,7 +41,7 @@ Not promised on the call, but worth tracking — things that came up and were de
 | **Comprehensive OpenAlex API "skill"** covering all API functionality (preferred over MCP) (Adam Buttrick; +Jeremy Prevost, Eric Jeangirard, Trang Le) | DevRel: package the API as an agent skill. |
 | **MCP server feedback** — members offered to test the in-development MCP server (Markus Skyttner) | **Tracked — internal job filed.** We'll ping Markus (and others who're keen on agent access, e.g. Adam) for feedback once the MCP server hits beta. |
 | **Publication-year inconsistencies vs Scopus** (Maria Mora Mora) | Offered to share the stats + affected works she validated against Scopus + raw data. Invite the data. |
-| **AER (entity resolution) v4 release estimate** (Maria Mora Mora) | Partly answered re: narrowing ORCID inference scope; a timeline estimate is still owed. |
+| **AER (entity resolution) v4 release estimate** (Maria Mora Mora) | Answered on the call: this *is* v4 — it's not a one-time release but continuous, incremental improvement of the current algorithm (e.g. re-sourcing ORCID after fixing error-propagation bugs), not a big-bang rerun from scratch. No single dated release to estimate. |
 
 ---
 
