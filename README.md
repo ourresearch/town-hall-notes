@@ -15,6 +15,10 @@ The retros are generated with the help of an AI agent (Claude Code) using our op
 
 - **Q2 2026**: [retro](2026-q2/retro.md) | [roadmap](2026-q2/roadmap.md) | [transcript](2026-q2/transcript.md) | [followups](2026-q2/followups.md)
 
+## Community Advisory Board
+
+- **2026-07-09**: [retro](2026-07-09-cab/retro.md) | [roadmap](2026-07-09-cab/roadmap.md)
+
 ## Members meetings
 
 - **2026-05-27** (first one): [retro](2026-05-27-members-meeting/retro.md) | [roadmap](2026-05-27-members-meeting/roadmap.md) | [transcript](2026-05-27-members-meeting/transcript.md) | [followups](2026-05-27-members-meeting/followups.md)
