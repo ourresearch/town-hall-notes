@@ -81,3 +81,16 @@ For a taste of what this data can do, see the new blog case study: [The Hakai In
 - **A first-class `corpus` selector** (core / expansion / all) replaces the confusing `is_xpac` filter for choosing between the curated 317M-work core corpus and the 510M-work expanded one.
 - **~42 new institutional members** joined, including the Wellcome Trust, TU Delft, Curtin, and 11 institutions via the JISC consortium; we're positioned as the open replacement for the Jisc Publications Router, which retired July 1.
 - **openalex.org/brand** is live (logos, colors, typography), and the website now sits behind bot protection — while api.openalex.org stays intentionally wide open as a public good.
+
+## Team
+
+- Shubhankar Tripathy, who joined us as a junior developer earlier this year, has moved on — it wasn't the right fit on either side, and we wish him all the best.
+- **Rohan Mantena converted from contractor to full-time this week.** He joined on contract this spring and has been doing excellent work across the data pipeline — we're thrilled to have him aboard permanently.
+
+## Finances & sustainability
+
+Short version: it's going really well.
+
+- **We're on track against the five-year plan targets in our Arcadia grant** — the sustainability milestones we committed to are being hit.
+- **Membership and supporter growth is strong**: ~42 new institutional members joined in just this six-week window (see above), alongside continued growth in supporters.
+- **Enterprise revenue is growing**, driven especially by a wave of new enterprise contracts for PDF-archive sync — organizations syncing our full-text archive for their own infrastructure.
