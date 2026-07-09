@@ -1,6 +1,6 @@
 # Roadmap — what's next
 
-What we're actively working on and planning for the rest of Q3. As always with the CAB: **none of this is set in stone — this meeting is your chance to push us in or out on each of these.**
+What we're actively working on and planning for Q3. As always with the CAB: **none of this is set in stone — this meeting is your chance to push us in or out on each of these.**
 
 ## OQL: alpha → beta → launch
 
@@ -53,4 +53,4 @@ The MCP server, CLI improvements, and an agent Skill covering the full API remai
 
 ## How we'd like to use this meeting
 
-The discussion prompts above are real questions, not rhetorical. We're mid-quarter — CAB input now meaningfully changes what we commit to for the rest of Q3 and what we bring to the next town hall. Tell us what's wrong, what's missing, and what you'd swap out for what.
+The discussion prompts above are real questions, not rhetorical. Q3 is just getting started — CAB input now meaningfully changes what we commit to this quarter and what we bring to the next town hall. Tell us what's wrong, what's missing, and what you'd swap out for what.
