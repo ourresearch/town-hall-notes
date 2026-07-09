@@ -84,7 +84,7 @@ For a taste of what this data can do, see the new blog case study: [The Hakai In
 
 ## Team
 
-- Shubhankar Tripathy, who joined us as a junior developer earlier this year, has moved on — it didn't work out.
+- Shubhankar, who joined us as a junior developer earlier this year, has moved on.
 - **Rohan Mantena converted from contractor to full-time this week.** He joined on contract this spring and has been doing excellent work across the data pipeline — we're thrilled to have him aboard permanently.
 
 ## Finances & sustainability
